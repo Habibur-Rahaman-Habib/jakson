@@ -1,0 +1,54 @@
+/************  Header start  ***********/
+.logo {
+  a {
+    display: block;
+    padding: 30px 0;
+  }
+}
+.main_menu {
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    @include screen-1600 {
+      gap: 30px;
+    }
+    li {
+      &:hover {
+        > a {
+          color: var(--muddy);
+        }
+      }
+      &.active {
+        a {
+          color: var(--muddy);
+        }
+      }
+      a {
+        color: white;
+        display: inline-block;
+        padding: 37px 0;
+        transition: var(--transition);
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.header_contact {
+  margin-top: 23px;
+  a {
+    width: 185px;
+    height: 60px;
+  }
+}
+
+.mobile_menu_bar {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
