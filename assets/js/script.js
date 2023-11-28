@@ -58,6 +58,16 @@
     //     $(".preloader").fadeOut();
     // });
 
+    // index 1 testimonial slider
+    $(".testi_wrap").slick({
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+        customPaging: function (slider, i) {
+            return '<span></span>';
+        },
+    });
+
 
     //12. Fancybox
     Fancybox.bind("[data-fancybox]", {});
@@ -82,6 +92,26 @@
             time: 5000
         });
     });
+
+    //filter
+    var $gird = $('.portfolio_item_active').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+    });
+
+    $('.portfolio_button').on('click', 'button', function () {
+        var filterValue = $(this).attr('data-filter');
+        $gird.isotope({ filter: filterValue });
+        $grid.isotope({ filter: '.transition' });
+    });
+
+    $(".portfolio_button button").each(function () {
+        $(this).on("click", function () {
+            $(this).parents(".portfolio_button").find("button.active").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+
 
 
 })(jQuery)

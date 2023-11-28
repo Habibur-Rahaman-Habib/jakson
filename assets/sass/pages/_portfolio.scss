@@ -1,0 +1,19 @@
+.about_project {
+  p {
+    text-align: justify;
+  }
+}
+
+.banner_item2 {
+  ul {
+    li {
+      a {
+        border-radius: 50% !important;
+        position: relative;
+        &::before {
+          border-radius: 50% !important;
+        }
+      }
+    }
+  }
+}

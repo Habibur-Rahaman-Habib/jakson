@@ -1,0 +1,157 @@
+/***** banner part ******/
+.banner_content {
+  h1 {
+    font-size: 170px;
+    text-align: center;
+    @media (max-width: 1842px) {
+      font-size: 160px;
+    }
+    @media (max-width: 1742px) {
+      font-size: 150px;
+    }
+    @media (max-width: 1642px) {
+      font-size: 140px;
+    }
+    @media (max-width: 1542px) {
+      font-size: 130px;
+    }
+    @media (max-width: 1442px) {
+      font-size: 120px;
+    }
+    @media (max-width: 1342px) {
+      font-size: 100px;
+    }
+    @media (max-width: 1055px) {
+      font-size: 80px;
+    }
+    @media (max-width: 855px) {
+      font-size: 65px;
+    }
+    @media (max-width: 707px) {
+      font-size: 55px;
+    }
+  }
+  .banner_meta {
+    margin-top: 100px;
+    @media (max-width: 615px) {
+      justify-content: flex-start !important;
+      margin-top: 60px;
+    }
+    img {
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+  }
+}
+.banner2 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  @media (max-width: 1151px) {
+    display: none;
+  }
+}
+
+/***** about part ******/
+
+/***** experience year part ******/
+.year {
+  h1 {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-size: 60px;
+  }
+}
+
+/***** services part ******/
+.service_item {
+  border-radius: 10px;
+  padding: 50px 20px;
+  h4 {
+    margin: 20px 0;
+  }
+}
+/***** services part ******/
+.portfolio_item2 {
+  &:hover {
+    .f_content {
+      p {
+        background: var(--muddy);
+        color: var(--dark);
+      }
+    }
+  }
+  .portfolio_single {
+  }
+  .f_content {
+    p {
+      padding: 3px 15px;
+      border-radius: 25px;
+      margin: 30px 0;
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    h3 {
+    }
+  }
+}
+
+/***** global client part ******/
+
+/***** blog post part ******/
+.blog_item2 {
+  padding: 20px;
+}
+.blog_content2 {
+  padding: 0 !important;
+  .b_content {
+    transform: translate(0) !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    padding-top: 25px !important;
+    .read_wrap {
+      .read {
+        width: 240px !important;
+      }
+    }
+  }
+}
+
+/***** lets talk part ******/
+.let {
+  span {
+    height: 1px;
+    background: var(--border);
+    position: relative;
+    &::before {
+      content: "Get in Touch";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--muddy);
+      right: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+  }
+  a {
+    padding: 10px 45px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    transition: var(--transition);
+    font-weight: 600;
+    &:hover {
+      color: var(--muddy);
+    }
+  }
+}

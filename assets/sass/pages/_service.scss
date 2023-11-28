@@ -84,3 +84,39 @@
     padding-left: 0;
   }
 }
+
+/*********  service details page  ************/
+.contact_img2 {
+  border: 0;
+  outline: 0;
+}
+
+.contact_content2 {
+  p {
+    text-align: justify;
+  }
+}
+
+.dream_item {
+  padding: 40px 30px;
+  border-radius: 10px;
+  p {
+    margin: 25px 0;
+  }
+  ul {
+    li {
+      font-size: 16px;
+      color: #999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      i {
+        font-size: 7px;
+        color: white;
+      }
+      & + li {
+        margin-top: 20px;
+      }
+    }
+  }
+}
