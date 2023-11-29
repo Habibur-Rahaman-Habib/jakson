@@ -51,8 +51,81 @@
     display: none;
   }
 }
+.globe {
+  img {
+    animation: spins 6s infinite linear;
+  }
+}
 
-/***** about part ******/
+@keyframes spins {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.arrow {
+  img {
+    animation: moves 6s infinite linear;
+  }
+}
+
+@keyframes moves {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-15px, -15px);
+  }
+  55% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(15px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/***** scrolling part ******/
+.ur-ticker-wrapper {
+  box-sizing: content-box;
+  width: 100%;
+  padding-left: 100%;
+}
+
+.ur-ticker-wrapper .ur-ticker {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 26px 0;
+  animation: 30s ticker linear infinite;
+  box-sizing: content-box;
+  padding-right: 100%;
+}
+
+.ur-ticker-wrapper .ur-ticker span {
+  font-size: 36px;
+  color: var(--dark);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.ur-ticker-wrapper .ur-ticker span + span {
+  margin-left: 15px;
+}
+
+.ur-ticker-wrapper .ur-ticker span:hover {
+  transform: translateY(-6px);
+}
+
+.ur-ticker-wrapper .ur-ticker:hover {
+  animation-play-state: paused;
+}
 
 /***** experience year part ******/
 .year {
@@ -154,4 +227,48 @@
       color: var(--muddy);
     }
   }
+}
+
+/***** work slider part ******/
+.work_item {
+  span {
+    font-size: 130px;
+    font-weight: 800;
+    color: white;
+  }
+  h1 {
+    font-size: 135px;
+    font-weight: 800;
+    color: white;
+    display: inline-block;
+  }
+}
+@include screen-1400 {
+  .work_item {
+    span {
+      font-size: 100px;
+    }
+    h1 {
+      font-size: 100px;
+    }
+  }
+}
+
+@include screen-1199 {
+  .work_item {
+    span {
+      font-size: 60px;
+    }
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+.work_slider
+  .slick-slide.slick-current.slick-active.slick-center
+  .work_item
+  h1 {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
 }

@@ -19,11 +19,6 @@
     */
 
 
-    // //1. Data Background Set
-    // $('[data-background]').each(function () {
-    //     $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
-    // });
-
     //2. Scroll top button
     $(window).on("scroll", function () {
         var scrollBar = $(this).scrollTop();
@@ -84,6 +79,22 @@
         asNavFor: ".blog_img_slider",
     });
 
+    // work slider
+    $('.work_slider').slick({
+        centerMode: true,
+        slidesToShow: 3,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+        ]
+    });
 
     //12. Fancybox
     Fancybox.bind("[data-fancybox]", {});

@@ -1,6 +1,6 @@
 /***** Banner part ******/
 .banner_item {
-  padding: 90px 75px;
+  padding: 100px 75px;
   @media (max-width: 1760px) {
     padding: 80px 75px;
   }
@@ -74,7 +74,7 @@
 }
 
 .banner_img {
-  margin-top: 70px;
+  margin-top: 50px;
   a {
     width: 245px;
     height: 60px;
@@ -87,8 +87,17 @@
     font-size: 18px;
     color: var(--dark);
     font-weight: 600;
+    animation: move 6s infinite ease-in-out;
+    &:hover {
+      img {
+        padding-left: 10px;
+      }
+    }
     @media (max-width: 733px) {
       display: none;
+    }
+    img {
+      transition: var(--transition);
     }
   }
   .dribble {
@@ -98,6 +107,24 @@
   .bihance {
     right: 5%;
     top: 5%;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  55% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
@@ -117,6 +144,63 @@
   }
   .banner_r {
     order: 3;
+  }
+}
+
+.xb-about-circle {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .a-logo {
+    width: 85px;
+    height: 85px;
+    background: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .a-text {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: spin 12s infinite linear;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  img {
+    animation: blinks 6s infinite ease-in-out;
+  }
+}
+
+@keyframes blinks {
+  0% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.4);
   }
 }
 
@@ -184,7 +268,64 @@
 }
 
 /***** expertise skill part ******/
-
+.skill_area {
+  justify-content: center;
+  li {
+    width: 345px;
+    height: 345px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    @include screen-768 {
+      width: 270px;
+      height: 270px;
+    }
+    &:hover::before {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0.7);
+      width: 83%;
+      height: 83%;
+      background: var(--light-dark);
+      border-radius: 50%;
+      z-index: -1;
+      transition: var(--transition);
+      visibility: hidden;
+      opacity: 0;
+    }
+    & + li {
+      margin-left: -30px;
+      @include screen-1400 {
+        &:nth-child(4) {
+          margin-top: -30px;
+        }
+      }
+      @include screen-1199 {
+        &:nth-child(3) {
+          margin-top: -30px;
+        }
+      }
+      @include screen-575 {
+        margin-left: 0;
+        &:nth-child(3) {
+          margin-top: 0px;
+        }
+        &:nth-child(4) {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
 /***** our award part ******/
 .view {
   a {
@@ -456,4 +597,57 @@
       }
     }
   }
+}
+
+/***** what do part ******/
+.do_list {
+  li {
+    color: white;
+    display: flex;
+    align-items: center;
+    & + li {
+      margin-top: 6px;
+    }
+  }
+}
+
+.quickview {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition);
+  margin-left: auto;
+  &:hover {
+    border-color: var(--muddy);
+  }
+  img {
+    transition: var(--transition);
+  }
+}
+
+.btn-close {
+  right: 5px;
+  top: 5px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.scroll-top-btn {
+  width: 45px;
+  height: 50px;
+  background-color: var(--muddy);
+  color: var(--dark);
+  border-radius: 4px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  font-size: 15px;
+  font-weight: 500;
 }
