@@ -25,12 +25,12 @@
 <body>
 
     <!--preloader start-->
-    <!-- <div class="preloader">
-        <h1 class="display-1">UROAN</h1>
+    <div class="preloader">
+        <h1 class="display-1 fw-8">JAKSON</h1>
         <div class="preload-progress">
             <span></span>
         </div>
-    </div> -->
+    </div>
     <!--preloader end-->
 
     <header class="bb">
@@ -44,13 +44,38 @@
                 <div class="col-xxl-6 col-xl-6 d-none d-xxl-block  dark_bg bl br h-100">
                     <nav class="main_menu h-100">
                         <ul class="h-100">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active position-relative"><a href="#">Home <i
+                                        class="fa-solid fa-angle-down"></i></a>
+                                <ul class="p-4 rounded-3 light_dark_bg position-absolute">
+                                    <li><a href="index.html" class="white">Home 01</a></li>
+                                    <li class="bt"><a href="index-2.html" class="white ">Home 02</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">About</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Portfolio</a></li>
+                            <li class="position-relative"><a href="#">Service <i class="fa-solid fa-angle-down"></i></a>
+                                <ul class="p-4 rounded-3 light_dark_bg position-absolute">
+                                    <li><a href="service.html" class="white">Service All</a></li>
+                                    <li class="bt"><a href="service-details.html" class="white ">Service Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="position-relative"><a href="#">Portfolio <i
+                                        class="fa-solid fa-angle-down"></i></a>
+                                <ul class="p-4 rounded-3 light_dark_bg position-absolute">
+                                    <li><a href="portfolio.html" class="white">Portfolio All</a></li>
+                                    <li class="bt"><a href="portfolio-details.html" class="white ">Portfolio Details</a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li><a href="#">testmonial</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class="position-relative"><a href="#">Blog <i class="fa-solid fa-angle-down"></i></a>
+                                <ul class="p-4 rounded-3 light_dark_bg position-absolute">
+                                    <li><a href="blog.html" class="white">Blog All</a></li>
+                                    <li class="bt"><a href="blog-single.html" class="white ">Blog Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -652,11 +677,83 @@
 
     <!-- moblie menu -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <h1>adhiadf</h1>
+
+        <div class="offcanvas-body light_dark_bg">
+            <div class="mobile-menu">
+                <a href="index.html" class="logo py-3"><img src="assets/images/logo/logo.png" alt="logo"
+                        class="img-fluid"></a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+
+                <ul class="accordion accordion-flush mobile_dropdown" id="accordionFlushExample">
+                    <li class="accordion-item">
+                        <h2>
+                            <button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false">
+                                Home
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="index.html">Home Page 1</a></li>
+                                    <li><a href="index-2.html">Home Page 2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <h2>
+                            <button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapsetwo" aria-expanded="false">
+                                Service
+                            </button>
+                        </h2>
+                        <div id="flush-collapsetwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="service.html">service</a></li>
+                                    <li><a href="service-details.html">service Details</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <h2>
+                            <button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapsethree" aria-expanded="false">
+                                Blog
+                            </button>
+                        </h2>
+                        <div id="flush-collapsethree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="blog-single.html">Blog Details</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <h2>
+                            <button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapsefour" aria-expanded="false">
+                                Portfolio
+                            </button>
+                        </h2>
+                        <div id="flush-collapsefour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <h2><a href="contact.html">Contact</a></h2>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 

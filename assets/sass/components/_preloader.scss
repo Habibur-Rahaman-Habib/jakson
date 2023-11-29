@@ -1,0 +1,39 @@
+/******************** preloader ******************/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.preloader .preload-progress {
+  width: 250px;
+  height: 8px;
+  border-radius: 30px;
+}
+
+.preloader .preload-progress span {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 30px;
+  background-color: var(--muddy);
+  animation: 3s loading;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

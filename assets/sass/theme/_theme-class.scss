@@ -53,3 +53,16 @@
 .fw-9 {
   font-weight: 900;
 }
+
+.slider-spacing {
+  .slick-list {
+    margin: 0 -12px;
+    .slick-slide {
+      margin: 0 12px;
+    }
+  }
+}
+
+.text-justify {
+  text-align: justify;
+}

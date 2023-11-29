@@ -54,9 +54,9 @@
 
 
     //11. Preloader
-    // $(window).on("load", function () {
-    //     $(".preloader").fadeOut();
-    // });
+    setTimeout(() => {
+        $('.preloader').fadeOut()
+    }, 1500);
 
     // index 1 testimonial slider
     $(".testi_wrap").slick({
@@ -66,6 +66,22 @@
         customPaging: function (slider, i) {
             return '<span></span>';
         },
+    });
+
+    // blog page slider
+    $(".blog_img_slider").slick({
+        slidesToShow: 1,
+        asNavFor: ".blog_content_slider",
+        arrows: true,
+        prevArrow: '<button class="prev-arrow"><i class="fa-solid fa-arrow-left-long"></i></button>',
+        nextArrow: '<button class="next-arrow"><i class="fa-solid fa-arrow-right-long"></i></button>',
+    });
+
+    $(".blog_content_slider").slick({
+        slidesToShow: 1,
+        focusOnSelect: true,
+        arrows: false,
+        asNavFor: ".blog_img_slider",
     });
 
 
@@ -108,6 +124,19 @@
     $(".portfolio_button button").each(function () {
         $(this).on("click", function () {
             $(this).parents(".portfolio_button").find("button.active").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+
+    $('.portfolio_button2').on('click', 'button', function () {
+        var filterValue = $(this).attr('data-filter');
+        $gird.isotope({ filter: filterValue });
+        $grid.isotope({ filter: '.transition' });
+    });
+
+    $(".portfolio_button2 button").each(function () {
+        $(this).on("click", function () {
+            $(this).parents(".portfolio_button2").find("button.active").removeClass("active");
             $(this).addClass("active");
         });
     });

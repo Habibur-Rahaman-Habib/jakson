@@ -70,3 +70,13 @@
     padding-top: 100px;
   }
 }
+
+.pb-250 {
+  padding-bottom: 250px;
+  @include screen-1199 {
+    padding-bottom: 150px;
+  }
+  @include screen-992 {
+    padding-bottom: 50px;
+  }
+}

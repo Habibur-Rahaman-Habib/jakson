@@ -15,12 +15,17 @@
       gap: 30px;
     }
     li {
-      &:hover {
-        > a {
+      &:hover > {
+        ul {
+          visibility: visible;
+          opacity: 1;
+          top: 100%;
+        }
+        a {
           color: var(--muddy);
         }
       }
-      &.active {
+      &.active > {
         a {
           color: var(--muddy);
         }
@@ -33,6 +38,44 @@
         font-size: 18px;
         font-weight: 500;
         text-transform: capitalize;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        i {
+          display: inline-block;
+          margin-top: 6px;
+          font-size: 13px;
+        }
+      }
+      ul {
+        visibility: hidden;
+        opacity: 0;
+        transition: var(--transition);
+        top: 110%;
+        left: 0;
+        width: 230px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        z-index: 2;
+        li {
+          width: 100%;
+          &:hover {
+            a {
+              padding-left: 5px;
+            }
+          }
+          a {
+            padding: 0;
+            padding-bottom: 7px;
+            transition: var(--transition);
+          }
+          & + li {
+            a {
+              padding-top: 5px;
+            }
+          }
+        }
       }
     }
   }
