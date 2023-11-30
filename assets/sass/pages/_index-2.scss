@@ -33,6 +33,9 @@
   }
   .banner_meta {
     margin-top: 100px;
+    @media (max-width: 1199px) {
+      margin-top: 120px;
+    }
     @media (max-width: 615px) {
       justify-content: flex-start !important;
       margin-top: 60px;
@@ -77,13 +80,13 @@
     transform: translate(0px, 0px);
   }
   25% {
-    transform: translate(-15px, -15px);
+    transform: translate(-8px, -8px);
   }
   55% {
     transform: translate(0px, 0px);
   }
   75% {
-    transform: translate(15px, 15px);
+    transform: translate(8px, 8px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -204,15 +207,23 @@
       height: 180px;
       border-radius: 50%;
       background: var(--muddy);
-      right: 0;
       top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-weight: 600;
+      right: 0;
+      animation: getin 10s linear;
+      @include screen-1199 {
+        width: 150px;
+        height: 150px;
+      }
+      @include screen-768 {
+        width: 100px;
+        height: 100px;
+        font-size: 12px;
+      }
     }
   }
   a {
@@ -226,6 +237,37 @@
     &:hover {
       color: var(--muddy);
     }
+  }
+}
+.talk {
+  right: 0;
+  bottom: 0;
+  animation: movess 6s infinite linear;
+}
+@keyframes movess {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(10px, -8px);
+  }
+  55% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(10px, -8px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes getin {
+  0% {
+    right: 70%;
+  }
+  100% {
+    right: 0%;
   }
 }
 
@@ -243,7 +285,17 @@
     display: inline-block;
   }
 }
-@include screen-1400 {
+@media (max-width: 1855px) {
+  .work_item {
+    span {
+      font-size: 120px;
+    }
+    h1 {
+      font-size: 120px;
+    }
+  }
+}
+@media (max-width: 1650px) {
   .work_item {
     span {
       font-size: 100px;
@@ -254,7 +306,28 @@
   }
 }
 
+@include screen-1400 {
+  .work_item {
+    span {
+      font-size: 90px;
+    }
+    h1 {
+      font-size: 90px;
+    }
+  }
+}
+
 @include screen-1199 {
+  .work_item {
+    span {
+      font-size: 70px;
+    }
+    h1 {
+      font-size: 70px;
+    }
+  }
+}
+@include screen-400 {
   .work_item {
     span {
       font-size: 60px;
@@ -271,4 +344,61 @@
   h1 {
   -webkit-text-stroke: 1px white;
   color: transparent;
+}
+
+// filer part
+.portfolio_item2 {
+  &:hover {
+    .portfolio_single {
+      .xb-about-circle {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  .portfolio_single {
+    position: relative;
+    .xb-about-circle {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      background: var(--dark);
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      visibility: hidden;
+      opacity: 0;
+      transition: var(--transition);
+      .a-logo {
+        background: var(--dark);
+        width: 60px;
+        height: 60px;
+      }
+
+      .a-text {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        animation: blogs 12s infinite linear;
+        right: inherit;
+        bottom: inherit;
+        img {
+          width: 96%;
+          height: 96%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes blogs {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }

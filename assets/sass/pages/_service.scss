@@ -52,6 +52,13 @@
 }
 
 .common_left {
+  .common_img {
+    .start {
+      bottom: 15%;
+      right: 20%;
+      animation: blinks 6s infinite ease-in-out;
+    }
+  }
   .accordion-item {
     border: none;
     border-bottom: 1px solid var(--border);
@@ -66,6 +73,9 @@
     padding-left: 0;
     padding-top: 30px;
     padding-bottom: 30px;
+    &::after {
+      background-image: url("../images/icons/upright.png");
+    }
     &.collapsed {
       border-radius: 0 !important;
     }
@@ -73,6 +83,9 @@
       color: white;
       background-color: var(--light-dark);
       box-shadow: none;
+      &::after {
+        transform: rotate(90deg);
+      }
     }
     &:focus {
       border-color: transparent;
@@ -118,5 +131,23 @@
         margin-top: 20px;
       }
     }
+  }
+}
+
+// arrow icon animation
+.arrow_icon {
+  span {
+    img {
+      animation: arrow 3s infinite ease-in-out;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
   }
 }

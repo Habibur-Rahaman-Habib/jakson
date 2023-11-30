@@ -85,8 +85,14 @@
         slidesToShow: 3,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         responsive: [
+            {
+                breakpoint: 1290,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
             {
                 breakpoint: 768,
                 settings: {

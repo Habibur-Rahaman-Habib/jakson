@@ -51,12 +51,13 @@
   display: block;
   padding: var(--bs-accordion-btn-padding-y);
   font-size: 1rem;
-  color: var(--bs-accordion-btn-color);
+  color: white;
   background-color: var(--light-dark);
   -webkit-transition: var(--bs-accordion-transition);
   -o-transition: var(--bs-accordion-transition);
   transition: var(--bs-accordion-transition);
-  font-weight: 500;
+  font-weight: 400;
+  padding-left: 0;
 }
 .mobile_dropdown li .accordion-body {
   padding: 0;
