@@ -755,11 +755,12 @@ p {
 .footer_contact {
   padding: 30px;
   border-radius: 5px; }
+  .footer_contact p {
+    margin-bottom: 8px; }
   .footer_contact a:hover h5 {
     color: var(--muddy); }
   .footer_contact a h5 {
     color: white;
-    margin-top: 8px;
     -webkit-transition: var(--transition);
     -o-transition: var(--transition);
     transition: var(--transition); }
@@ -1018,8 +1019,8 @@ p {
     font-size: 18px;
     color: var(--dark);
     font-weight: 600;
-    -webkit-animation: move 6s infinite ease-in-out;
-    animation: move 6s infinite ease-in-out; }
+    -webkit-animation: move 6s infinite linear;
+    animation: move 6s infinite linear; }
     .banner_img a:hover img {
       padding-left: 10px; }
     @media (max-width: 733px) {
@@ -1426,7 +1427,9 @@ p {
       padding: 40px; } }
   .testi_area .shape1 {
     top: -0%;
-    left: -8%; }
+    left: -8%;
+    -webkit-animation: move 6s infinite linear;
+    animation: move 6s infinite linear; }
     @media (max-width: 991.98px) {
       .testi_area .shape1 {
         display: none; } }
@@ -1574,9 +1577,12 @@ p {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  gap: 10px; }
   .do_list li + li {
     margin-top: 6px; }
+  .do_list li i {
+    font-size: 10px; }
 
 .quickview {
   width: 60px;
@@ -2045,7 +2051,7 @@ p {
 
 /***** lets talk part ******/
 .let .let_get:hover .touch {
-  color: var(--dark);
+  color: white;
   -webkit-box-shadow: 0px 0px 20px #4c4c4c;
   box-shadow: 0px 0px 20px #4c4c4c; }
 
@@ -2073,7 +2079,7 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   font-weight: 600;
-  color: white;
+  color: var(--dark);
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
@@ -2089,8 +2095,8 @@ p {
       font-size: 12px; } }
 
 .let .let_contact {
-  padding: 10px 45px;
-  border-radius: 25px;
+  padding: 18px 45px;
+  border-radius: 40px;
   display: inline-block;
   margin-right: 10px;
   color: white;
@@ -2414,8 +2420,12 @@ h1 {
 .about_project p {
   text-align: justify; }
 
+.banner_item2 ul li:hover a::before {
+  background: white; }
+
 .banner_item2 ul li a {
   border-radius: 50% !important;
-  position: relative; }
+  position: relative;
+  background: var(--muddy); }
   .banner_item2 ul li a::before {
     border-radius: 50% !important; }

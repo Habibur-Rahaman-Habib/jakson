@@ -7,9 +7,17 @@
 .banner_item2 {
   ul {
     li {
+      &:hover {
+        a {
+          &::before {
+            background: white;
+          }
+        }
+      }
       a {
         border-radius: 50% !important;
         position: relative;
+        background: var(--muddy);
         &::before {
           border-radius: 50% !important;
         }

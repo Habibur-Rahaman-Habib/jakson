@@ -96,7 +96,7 @@
     font-size: 18px;
     color: var(--dark);
     font-weight: 600;
-    animation: move 6s infinite ease-in-out;
+    animation: move 6s infinite linear;
     &:hover {
       img {
         padding-left: 10px;
@@ -500,6 +500,7 @@
   .shape1 {
     top: -0%;
     left: -8%;
+    animation: move 6s infinite linear;
     @include screen-992 {
       display: none;
     }
@@ -649,8 +650,12 @@
     color: white;
     display: flex;
     align-items: center;
+    gap: 10px;
     & + li {
       margin-top: 6px;
+    }
+    i {
+      font-size: 10px;
     }
   }
 }
