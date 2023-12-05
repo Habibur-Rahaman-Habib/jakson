@@ -164,6 +164,9 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  @include screen-768 {
+    margin: auto;
+  }
   .a-logo {
     width: 85px;
     height: 85px;
