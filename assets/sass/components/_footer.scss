@@ -1,9 +1,17 @@
 .footer_contact {
   padding: 30px;
   border-radius: 5px;
-  h5 {
-    color: white;
-    margin-top: 8px;
+  a {
+    &:hover {
+      h5 {
+        color: var(--muddy);
+      }
+    }
+    h5 {
+      color: white;
+      margin-top: 8px;
+      transition: var(--transition);
+    }
   }
   ul {
     gap: 15px;
@@ -61,6 +69,9 @@
       color: #999;
       border: none;
       padding: 30px;
+      &:focus-visible {
+        outline: none;
+      }
     }
     button {
       width: 255px;

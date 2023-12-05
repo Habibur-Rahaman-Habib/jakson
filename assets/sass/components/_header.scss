@@ -95,3 +95,34 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+/* for sticky header */
+.fixed_menu {
+  background: var(--dark);
+  animation: sticky 1s;
+  transition: 0.2s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 77;
+}
+
+@-webkit-keyframes sticky {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes sticky {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+/* for sticky header */

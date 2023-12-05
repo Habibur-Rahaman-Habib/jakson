@@ -173,6 +173,7 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
+    cursor: pointer;
   }
   .a-text {
     position: absolute;
@@ -340,11 +341,28 @@
 }
 /***** our award part ******/
 .view {
-  a {
+  overflow: hidden;
+  &:hover {
+    p {
+      color: white;
+    }
+    span {
+      transform: translate(14px, 3px);
+    }
+  }
+  p {
     font-size: 20px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    transition: var(--transition);
+    margin-right: 20px;
+    background: var(--light-dark);
+    position: relative;
+    z-index: 2;
+  }
+  span {
+    right: 0;
+    transform: translate(-4px, 3px);
+    z-index: 1;
+    transition: var(--transition);
   }
 }
 
@@ -447,18 +465,28 @@
 }
 
 /***** brand part ******/
-.brand {
-  ul {
-    margin-top: 70px;
-    justify-content: space-between;
-    gap: 30px;
-    @include screen-992 {
-      justify-content: center;
-    }
-    li {
-      img {
-      }
-    }
+
+.ur-brand-slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.ur-brand-single:hover img {
+  animation: 0.4s toTopFromBottom forwards;
+}
+
+@keyframes toTopFromBottom {
+  49% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  51% {
+    opacity: 1;
   }
 }
 
@@ -480,6 +508,10 @@
     .testi_item {
       gap: 45px;
       align-items: flex-end;
+      .testi_img {
+        border-radius: 115px 115px 0px 0px;
+        overflow: hidden;
+      }
       @include screen-768 {
         flex-direction: column;
         align-items: flex-start;
@@ -504,7 +536,6 @@
 .testi_wrap .slick-dots {
   position: absolute;
   right: 0px;
-  -ms-transform: translateY(-50%);
   padding: 15px 12px;
   bottom: 0px;
   display: flex;
@@ -516,6 +547,7 @@
     right: inherit;
   }
 }
+
 .testi_wrap .slick-dots li {
   text-align: center;
   display: block;
@@ -659,7 +691,12 @@
   position: fixed;
   bottom: 40px;
   right: 40px;
-  z-index: 100;
+  z-index: 10;
   font-size: 15px;
   font-weight: 500;
+  &:hover {
+    i {
+      animation: 0.4s toTopFromBottom forwards;
+    }
+  }
 }

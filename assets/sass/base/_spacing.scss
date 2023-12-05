@@ -105,6 +105,16 @@
   }
 }
 
+.pb-50 {
+  padding-bottom: 50px;
+  @include screen-1199 {
+    padding-bottom: 40px;
+  }
+  @include screen-768 {
+    padding-bottom: 30px;
+  }
+}
+
 .pb-75 {
   padding-bottom: 75px;
   @include screen-1199 {

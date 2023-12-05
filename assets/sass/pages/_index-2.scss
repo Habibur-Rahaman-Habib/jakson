@@ -143,8 +143,62 @@
 .service_item {
   border-radius: 10px;
   padding: 50px 20px;
+  &:hover {
+    img {
+      animation: 0.3s shake;
+    }
+    h4 {
+      color: var(--muddy);
+    }
+  }
   h4 {
     margin: 20px 0;
+    transition: var(--transition);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 /***** services part ******/
@@ -196,25 +250,68 @@
 
 /***** lets talk part ******/
 .let {
-  span {
-    height: 1px;
-    background: var(--border);
-    position: relative;
-    &::before {
-      content: "Get in Touch";
+  // span {
+  //   height: 1px;
+  //   background: var(--border);
+  //   position: relative;
+  //   &:hover::before {
+  //     color: var(--dark);
+  //     box-shadow: 0px 0px 20px #4c4c4c;
+  //   }
+  //   &::before {
+  //     content: "Get in Touch";
+  //     position: absolute;
+  //     width: 180px;
+  //     height: 180px;
+  //     border-radius: 50%;
+  //     background: var(--muddy);
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //     display: inline-flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     font-weight: 600;
+  //     right: 0;
+  //     color: white;
+  //     transition: var(--transition);
+  //     // animation: getin 10s linear;
+  //     @include screen-1199 {
+  //       width: 150px;
+  //       height: 150px;
+  //     }
+  //     @include screen-768 {
+  //       width: 100px;
+  //       height: 100px;
+  //       font-size: 12px;
+  //     }
+  //   }
+  // }
+  .let_get {
+    &:hover {
+      .touch {
+        color: var(--dark);
+        box-shadow: 0px 0px 20px #4c4c4c;
+      }
+    }
+    .line {
+      height: 1px;
+      background: var(--border);
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .touch {
       width: 180px;
       height: 180px;
       border-radius: 50%;
       background: var(--muddy);
-      top: 50%;
-      transform: translateY(-50%);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-weight: 600;
-      right: 0;
-      animation: getin 10s linear;
+      color: white;
+      transition: var(--transition);
+      margin-right: 100px;
       @include screen-1199 {
         width: 150px;
         height: 150px;
@@ -226,7 +323,7 @@
       }
     }
   }
-  a {
+  .let_contact {
     padding: 10px 45px;
     border-radius: 25px;
     display: inline-block;
@@ -242,7 +339,7 @@
 .talk {
   right: 0;
   bottom: 0;
-  animation: movess 6s infinite linear;
+  animation: movess 5s infinite linear;
 }
 @keyframes movess {
   0% {
@@ -362,7 +459,6 @@
       position: absolute;
       right: 30px;
       bottom: 30px;
-      background: var(--dark);
       border-radius: 50%;
       width: 110px;
       height: 110px;
@@ -400,5 +496,30 @@
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+// global clients
+.client_item {
+  &:hover {
+    .client_img_wrap {
+      .client_img {
+        transform: translateY(-46px);
+      }
+    }
+  }
+  .client_img_wrap {
+    overflow: hidden;
+    height: 38px;
+    width: auto;
+    .client_img {
+      transition: var(--transition);
+      text-align: center;
+      .ci1 {
+        display: block;
+        margin: auto;
+        margin-bottom: 15px;
+      }
+    }
   }
 }

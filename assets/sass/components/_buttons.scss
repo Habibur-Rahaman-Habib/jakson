@@ -12,6 +12,7 @@
   gap: 5px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
   &:hover::before {
     width: 100%;
     visibility: visible;

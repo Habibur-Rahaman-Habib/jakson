@@ -1,25 +1,19 @@
 (function ($) {
 
     /*
-        1. Data Background Function
-        2. Scroll top button
-        3. Offcanvus toggle
-        4. Theme Slider Functions
-        5. Pricing Range Slider
-        6. Nice Select
-        7. Checkout Toggle
-        8. Header Sticky
-        9. Mobile Menu
-        10. Header Search 
-        11. Preloader
-        12. Fancybox
-        13. Countdown
-        14. Cart Drawer
-        15. Wow Js
+    1. Scroll top button
+    2. Preloader
+    3. page  slider
+    4. Fancybox
+    5. wow js
+    6. counter UP
+    7. filter
+    8. Header Sticky
+    9. scroll to bottom
     */
 
 
-    //2. Scroll top button
+    //1. Scroll top button
     $(window).on("scroll", function () {
         var scrollBar = $(this).scrollTop();
         if (scrollBar > 150) {
@@ -34,26 +28,13 @@
         });
     });
 
-
-
-    //8. Header Sticky
-    $(window).on("scroll", function () {
-        var scrollBar = $(this).scrollTop();
-
-        if (scrollBar > 150) {
-            $(".header-sticky").addClass("sticky-on");
-        } else {
-            $(".header-sticky").removeClass("sticky-on");
-        }
-    });
-
-
-    //11. Preloader
+    //2. Preloader
     setTimeout(() => {
         $('.preloader').fadeOut()
-    }, 1500);
+    }, 2500);
 
-    // index 1 testimonial slider
+    // 3. page  slider
+    /********* testimonial slider **************/
     $(".testi_wrap").slick({
         slidesToShow: 1,
         arrows: false,
@@ -63,7 +44,7 @@
         },
     });
 
-    // blog page slider
+    /********* blog page slider **************/
     $(".blog_img_slider").slick({
         slidesToShow: 1,
         asNavFor: ".blog_content_slider",
@@ -79,7 +60,7 @@
         asNavFor: ".blog_img_slider",
     });
 
-    // work slider
+    /********* work slider **************/
     $('.work_slider').slick({
         centerMode: true,
         slidesToShow: 3,
@@ -102,31 +83,52 @@
         ]
     });
 
-    //12. Fancybox
+    //brand slider
+    $(".brand_slider").slick({
+        slidesToShow: 5,
+        autoplay: true,
+        speed: 700,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+
+        ]
+    });
+
+
+    //4. Fancybox
     Fancybox.bind("[data-fancybox]", {});
 
 
-
-    //13. Countdown
-    $(".countdown-timer").each(function () {
-        var $data_date = $(this).data('date');
-        $(this).countdown({
-            date: $data_date
-        });
-    });
-
-    //15. wow js
+    //5. wow js
     new WOW().init();
 
-    // counter UP
+    //6. counter UP
     $(document).ready(function () {
         $('.count').counterUp({
             delay: 10,
-            time: 5000
+            time: 1500
         });
     });
 
-    //filter
+    //7. filter
     var $gird = $('.portfolio_item_active').isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
@@ -135,7 +137,6 @@
     $('.portfolio_button').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
         $gird.isotope({ filter: filterValue });
-        $grid.isotope({ filter: '.transition' });
     });
 
     $(".portfolio_button button").each(function () {
@@ -158,7 +159,22 @@
         });
     });
 
+    //8. Header Sticky
+    $(window).scroll(function () {
 
+        if ($(window).scrollTop() > 200) {
+            $('.header').addClass('fixed_menu');
+        } else {
+            $('.header').removeClass('fixed_menu');
+        }
+    });
+
+    //9. scroll to bottom
+    document.querySelector('.scroll-down-arrow').addEventListener('click', function () {
+        document.querySelector('#section2').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 
 })(jQuery)
 
