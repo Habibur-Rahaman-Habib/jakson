@@ -11,8 +11,11 @@
     justify-content: center;
     gap: 50px;
     align-items: center;
-    @include screen-1600 {
+    @include screen-1700 {
       gap: 30px;
+    }
+    @include screen-1600 {
+      gap: 25px;
     }
     li {
       &:hover > {

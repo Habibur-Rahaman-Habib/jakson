@@ -57,6 +57,22 @@
   }
 }
 
+// .bi_social {
+//   padding: 125px 75px;
+//   @media (max-width: 1760px) {
+//     padding: 85px 75px;
+//   }
+//   @media (max-width: 1589px) {
+//     padding: 75px 75px;
+//   }
+//   @media (max-width: 1373px) {
+//     padding: 65px 70px;
+//   }
+//   @media (max-width: 1299px) {
+//     padding: 51px 60px;
+//   }
+// }
+
 .banner_middle {
   padding-top: 115px;
   text-align: center;
@@ -142,7 +158,7 @@
   border-right: 2px solid var(--border);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .banner_l {
     order: 2;
   }
