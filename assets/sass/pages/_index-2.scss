@@ -250,49 +250,7 @@
 
 /***** lets talk part ******/
 .let {
-  // span {
-  //   height: 1px;
-  //   background: var(--border);
-  //   position: relative;
-  //   &:hover::before {
-  //     color: var(--dark);
-  //     box-shadow: 0px 0px 20px #4c4c4c;
-  //   }
-  //   &::before {
-  //     content: "Get in Touch";
-  //     position: absolute;
-  //     width: 180px;
-  //     height: 180px;
-  //     border-radius: 50%;
-  //     background: var(--muddy);
-  //     top: 50%;
-  //     transform: translateY(-50%);
-  //     display: inline-flex;
-  //     align-items: center;
-  //     justify-content: center;
-  //     font-weight: 600;
-  //     right: 0;
-  //     color: white;
-  //     transition: var(--transition);
-  //     // animation: getin 10s linear;
-  //     @include screen-1199 {
-  //       width: 150px;
-  //       height: 150px;
-  //     }
-  //     @include screen-768 {
-  //       width: 100px;
-  //       height: 100px;
-  //       font-size: 12px;
-  //     }
-  //   }
-  // }
   .let_get {
-    &:hover {
-      .touch {
-        color: white;
-        box-shadow: 0px 0px 20px #4c4c4c;
-      }
-    }
     .line {
       height: 1px;
       background: var(--border);
@@ -312,6 +270,10 @@
       color: var(--dark);
       transition: var(--transition);
       margin-right: 150px;
+      cursor: pointer;
+      &:hover {
+        color: white;
+      }
       @include screen-1199 {
         width: 150px;
         height: 150px;
@@ -323,6 +285,7 @@
       }
     }
   }
+
   .let_contact {
     padding: 18px 45px;
     border-radius: 40px;
@@ -336,6 +299,10 @@
     }
   }
 }
+.cur {
+  cursor: inherit;
+}
+
 .talk {
   right: 0;
   bottom: 0;

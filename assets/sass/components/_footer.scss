@@ -72,7 +72,7 @@
       border: none;
       padding: 30px;
       &:focus-visible {
-        outline: none;
+        outline: 1px solid var(--muddy);
       }
     }
     button {

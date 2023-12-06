@@ -5,7 +5,10 @@ body {
 }
 
 input {
-  outline: 0;
+  outline: none;
+  &:focus-visible {
+    outline: 1px solid var(--muddy);
+  }
 }
 
 select {
