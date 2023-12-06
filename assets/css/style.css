@@ -58,13 +58,13 @@ button {
 img {
   max-width: 100%; }
 
-h1 {
+.h1 {
   font-size: 52px; }
   @media (max-width: 1199px) {
-    h1 {
+    .h1 {
       font-size: 42px; } }
   @media (max-width: 768px) {
-    h1 {
+    .h1 {
       font-size: 35px; } }
 
 h2 {
@@ -630,33 +630,33 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 50px;
-  width: 50px;
+  height: 90px;
+  width: 110px;
   margin: -25px 0 0 -25px; }
 
 #bars5 span {
   bottom: 10px;
-  width: 9px;
-  height: 5px;
+  width: 14px;
+  height: 30px;
   background: rgba(0, 0, 0, 0.25); }
 
 #bars5 span:nth-child(2) {
-  left: 11px;
+  left: 17px;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s; }
 
 #bars5 span:nth-child(3) {
-  left: 22px;
+  left: 34px;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s; }
 
 #bars5 span:nth-child(4) {
-  left: 33px;
+  left: 51px;
   -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s; }
 
 #bars5 span:nth-child(5) {
-  left: 44px;
+  left: 68px;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s; }
 
@@ -668,44 +668,44 @@ p {
 
 @-webkit-keyframes bars5 {
   0% {
-    height: 5px;
+    height: 10px;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     background: var(--muddy); }
   25% {
-    height: 30px;
+    height: 50px;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     background: var(--dark); }
   50% {
-    height: 30px;
+    height: 50px;
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
     background: var(--muddy); }
   100% {
-    height: 5px;
+    height: 10px;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     background: var(--dark); } }
 
 @keyframes bars5 {
   0% {
-    height: 5px;
+    height: 10px;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     background: var(--muddy); }
   25% {
-    height: 30px;
+    height: 50px;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     background: var(--dark); }
   50% {
-    height: 30px;
+    height: 50px;
     -webkit-transform: translateX(10px);
     transform: translateX(10px);
     background: var(--muddy); }
   100% {
-    height: 5px;
+    height: 10px;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     background: var(--dark); } }
@@ -757,7 +757,7 @@ p {
   padding: 30px;
   border-radius: 5px; }
   .footer_contact p {
-    margin-bottom: 8px; }
+    margin-bottom: 12px; }
   .footer_contact a:hover h5 {
     color: var(--muddy); }
   .footer_contact a h5 {
@@ -776,21 +776,21 @@ p {
       .footer_contact ul li a:hover {
         color: var(--muddy); }
 
-.outline_content h1 {
+.outline_content h2 {
   -webkit-text-stroke: 1px white;
   color: transparent;
   font-size: 200px; }
   @media (max-width: 1399.98px) {
-    .outline_content h1 {
+    .outline_content h2 {
       font-size: 155px; } }
   @media (max-width: 991.98px) {
-    .outline_content h1 {
+    .outline_content h2 {
       font-size: 100px; } }
   @media (max-width: 767.98px) {
-    .outline_content h1 {
+    .outline_content h2 {
       font-size: 80px; } }
   @media (max-width: 400px) {
-    .outline_content h1 {
+    .outline_content h2 {
       font-size: 50px; } }
 
 .contact_form {
@@ -886,7 +886,7 @@ p {
   padding: 0; }
 
 .mobile_dropdown li .accordion-body ul li + li {
-  border-top: 1px solid var(--border); }
+  border-top: 1px solid var(--border) !important; }
 
 .mobile_dropdown li .accordion-body ul li a {
   display: block;
@@ -922,7 +922,8 @@ p {
 
 .accordion-item {
   border: none;
-  border-bottom: 1px solid var(--border); }
+  border-bottom: 1px solid var(--border);
+  background-color: transparent !important; }
 
 /****************************** page styles ******************************/
 /***** Banner part ******/
@@ -993,19 +994,19 @@ p {
   @media (max-width: 450px) {
     .banner_middle {
       padding-top: 80px; } }
-  .banner_middle h1 {
+  .banner_middle h2 {
     color: white;
     font-size: 60px;
     width: 802px;
     margin: auto;
     max-width: 100%; }
     @media (max-width: 1024px) {
-      .banner_middle h1 {
+      .banner_middle h2 {
         font-size: 45px; } }
     @media (max-width: 768px) {
-      .banner_middle h1 {
+      .banner_middle h2 {
         font-size: 35px; } }
-    .banner_middle h1 span {
+    .banner_middle h2 span {
       color: var(--muddy); }
 
 .banner_img {
@@ -1186,7 +1187,7 @@ p {
     transform: scale(0.4); } }
 
 /***** Profile counter part ******/
-.profile_counter .common_heading h1 {
+.profile_counter .common_heading h2 {
   width: 1015px;
   margin: auto;
   max-width: 100%;
@@ -1433,10 +1434,12 @@ p {
 /***** testimonial part ******/
 .testi_area {
   padding: 60px;
+  padding-left: 80px;
   border-radius: 15px; }
   @media (max-width: 767.98px) {
     .testi_area {
-      padding: 40px; } }
+      padding: 40px;
+      padding-left: 60px; } }
   .testi_area .shape1 {
     top: -0%;
     left: -8%;
@@ -1622,6 +1625,10 @@ p {
     -o-transition: var(--transition);
     transition: var(--transition); }
 
+.eye_hover a {
+  position: absolute;
+  opacity: 0; }
+
 .btn-close {
   right: 5px;
   top: 5px;
@@ -1640,10 +1647,17 @@ p {
   right: 40px;
   z-index: 10;
   font-size: 15px;
-  font-weight: 500; }
-  .scroll-top-btn:hover i {
-    -webkit-animation: 0.4s toTopFromBottom forwards;
-    animation: 0.4s toTopFromBottom forwards; }
+  font-weight: 500;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition); }
+  .scroll-top-btn:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px); }
+    .scroll-top-btn:hover i {
+      -webkit-animation: 0.4s toTopFromBottom forwards;
+      animation: 0.4s toTopFromBottom forwards; }
 
 .arrow_icon span {
   width: 40px;
@@ -2095,7 +2109,7 @@ p {
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
-  margin-right: 100px; }
+  margin-right: 150px; }
   @media (max-width: 1199.98px) {
     .let .let_get .touch {
       width: 150px;

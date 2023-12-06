@@ -64,7 +64,7 @@
     padding-top: 80px;
   }
 
-  h1 {
+  h2 {
     color: white;
     font-size: 60px;
     width: 802px;
@@ -220,7 +220,7 @@
 /***** Profile counter part ******/
 .profile_counter {
   .common_heading {
-    h1 {
+    h2 {
       width: 1015px;
       margin: auto;
       max-width: 100%;
@@ -496,9 +496,11 @@
 /***** testimonial part ******/
 .testi_area {
   padding: 60px;
+  padding-left: 80px;
   border-radius: 15px;
   @include screen-768 {
     padding: 40px;
+    padding-left: 60px;
   }
   .shape1 {
     top: -0%;
@@ -681,6 +683,12 @@
     transition: var(--transition);
   }
 }
+.eye_hover {
+  a {
+    position: absolute;
+    opacity: 0;
+  }
+}
 
 .btn-close {
   right: 5px;
@@ -702,7 +710,9 @@
   z-index: 10;
   font-size: 15px;
   font-weight: 500;
+  transition: var(--transition);
   &:hover {
+    transform: translateY(-5px);
     i {
       animation: 0.4s toTopFromBottom forwards;
     }

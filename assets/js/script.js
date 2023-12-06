@@ -13,6 +13,14 @@
     */
 
 
+    //6. counter UP
+    $(document).ready(function () {
+        $('.count').counterUp({
+            delay: 10,
+            time: 1500
+        });
+    });
+
     //1. Scroll top button
     $(window).on("scroll", function () {
         var scrollBar = $(this).scrollTop();
@@ -112,6 +120,23 @@
         ]
     });
 
+    //9. scroll to bottom
+    document.addEventListener('DOMContentLoaded', function () {
+        // Wait for the DOM to be fully loaded
+
+        var scrollDownArrow = document.querySelector('.scroll-down-arrow');
+        var section2 = document.querySelector('#section2');
+
+        // Check if elements exist before adding event listener
+        if (scrollDownArrow && section2) {
+            scrollDownArrow.addEventListener('click', function () {
+                section2.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+
 
     //4. Fancybox
     Fancybox.bind("[data-fancybox]", {});
@@ -120,23 +145,15 @@
     //5. wow js
     new WOW().init();
 
-    //6. counter UP
-    $(document).ready(function () {
-        $('.count').counterUp({
-            delay: 10,
-            time: 1500
-        });
-    });
-
     //7. filter
-    var $gird = $('.portfolio_item_active').isotope({
+    var $grid = $('.portfolio_item_active').isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
     });
 
     $('.portfolio_button').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
-        $gird.isotope({ filter: filterValue });
+        $grid.isotope({ filter: filterValue });
     });
 
     $(".portfolio_button button").each(function () {
@@ -148,7 +165,7 @@
 
     $('.portfolio_button2').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
-        $gird.isotope({ filter: filterValue });
+        $grid.isotope({ filter: filterValue });
         $grid.isotope({ filter: '.transition' });
     });
 
@@ -169,12 +186,7 @@
         }
     });
 
-    //9. scroll to bottom
-    document.querySelector('.scroll-down-arrow').addEventListener('click', function () {
-        document.querySelector('#section2').scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+
 
 })(jQuery)
 

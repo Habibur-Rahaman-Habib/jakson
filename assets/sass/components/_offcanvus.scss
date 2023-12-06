@@ -63,7 +63,7 @@
   padding: 0;
 }
 .mobile_dropdown li .accordion-body ul li + li {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border) !important;
 }
 .mobile_dropdown li .accordion-body ul li a {
   display: block;
@@ -102,4 +102,5 @@
 .accordion-item {
   border: none;
   border-bottom: 1px solid var(--border);
+  background-color: transparent !important;
 }
