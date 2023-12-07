@@ -3,23 +3,16 @@
     /*
     1. Scroll top button
     2. Preloader
-    3. page  slider
-    4. Fancybox
-    5. wow js
-    6. counter UP
+    3. page slider
+    4. scroll to bottom
+    5. Fancybox
+    6. wow js
     7. filter
     8. Header Sticky
-    9. scroll to bottom
+    9. counter UP
+
     */
 
-
-    //6. counter UP
-    $(document).ready(function () {
-        $('.count').counterUp({
-            delay: 10,
-            time: 1500
-        });
-    });
 
     //1. Scroll top button
     $(window).on("scroll", function () {
@@ -39,7 +32,7 @@
     //2. Preloader
     setTimeout(() => {
         $('.preloader').fadeOut()
-    }, 2500);
+    }, 2000);
 
     // 3. page  slider
     /********* testimonial slider **************/
@@ -91,7 +84,7 @@
         ]
     });
 
-    //brand slider
+    /********* brand slider **************/
     $(".brand_slider").slick({
         slidesToShow: 5,
         autoplay: true,
@@ -120,14 +113,11 @@
         ]
     });
 
-    //9. scroll to bottom
+    //4. scroll to bottom
     document.addEventListener('DOMContentLoaded', function () {
-        // Wait for the DOM to be fully loaded
-
         var scrollDownArrow = document.querySelector('.scroll-down-arrow');
         var section2 = document.querySelector('#section2');
 
-        // Check if elements exist before adding event listener
         if (scrollDownArrow && section2) {
             scrollDownArrow.addEventListener('click', function () {
                 section2.scrollIntoView({
@@ -138,18 +128,20 @@
     });
 
 
-    //4. Fancybox
+    //5. Fancybox
     Fancybox.bind("[data-fancybox]", {});
 
 
-    //5. wow js
+    //6. wow js
     new WOW().init();
 
-    //7. filter
+    // 7. filter
+    /******* home page 2 filter ******/
     var $grid = $('.portfolio_item_active').isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
     });
+
 
     $('.portfolio_button').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
@@ -163,10 +155,11 @@
         });
     });
 
+
+    /******* blog page filter ******/
     $('.portfolio_button2').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue });
-        $grid.isotope({ filter: '.transition' });
     });
 
     $(".portfolio_button2 button").each(function () {
@@ -186,6 +179,13 @@
         }
     });
 
+    //9. counter UP
+    $(document).ready(function () {
+        $('.count').counterUp({
+            delay: 10,
+            time: 1500
+        });
+    });
 
 
 })(jQuery)
